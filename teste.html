@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Segurança Digital | CyberSafe 45+</title>
+    <link rel="stylesheet" href="css/test.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="logo-icon">🛡️</span>
+            <h1>CyberSafe 45+</h1>
+        </div>
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="index.html" class="nav-link">Introdução</a></li>
+                <li><a href="golpes.html" class="nav-link">Principais Golpes</a></li>
+                <li><a href="protecao.html" class="nav-link">Como se Proteger</a></li>
+                <li><a href="recursos.html" class="nav-link">Recursos Úteis</a></li>
+                <li><a href="teste.html" class="nav-link active">Teste seus Conhecimentos</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre Mim</a></li>
+            </ul>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="menu" id="menu">
+                <li><a href="index.html" class="nav-link">Introdução</a></li>
+                <li><a href="golpes.html" class="nav-link">Principais Golpes</a></li>
+                <li><a href="protecao.html" class="nav-link">Como se Proteger</a></li>
+                <li><a href="recursos.html" class="nav-link">Recursos Úteis</a></li>
+                <li><a href="teste.html" class="nav-link active">Teste seus Conhecimentos</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre Mim</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="digital-security-test" class="page">
+            <h2>Teste de Segurança Digital</h2>
+            <p>
+                Avalie seus conhecimentos sobre segurança digital. Responda com cuidado e aprenda com cada questão!
+            </p>
+
+            <div class="quiz-progress">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+
+            <div id="quiz-container" class="quiz-container"></div>
+
+            <div class="quiz-actions">
+                <button id="submit-btn" class="btn">Enviar Respostas</button>
+                <button id="restart-btn" class="btn" style="display: none;">Refazer Teste</button>
+            </div>
+
+            <div id="result" class="result-container" style="display: none;"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="social-links">
+            <a href="" aria-label="LinkedIn">🧑‍💼</a>
+            <a href="" aria-label="Github">🐙</a>
+        </div>
+        <p>CyberSafe 45+ © 2025 - Todos os direitos reservados</p>
+        <p>
+            Este site foi criado com o objetivo de informar e proteger pessoas com mais de 45 anos 
+            contra golpes digitais. As informações aqui contidas são apenas para fins educativos.
+        </p>
+    </footer>
+    
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</a>
+    
+    <script src="js/test.js"></script>
+</body>
+</html>

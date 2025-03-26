@@ -1,0 +1,691 @@
+/* Estilo inspirado no HackTheBox para CyberSafe 45+ */
+
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+/* Reset e configurações gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #0a0e12;
+  --secondary-bg-color: #141c21;
+  --primary-color: #9fef00; /* Verde neon HTB */
+  --secondary-color: #1a2332;
+  --accent-color: #68e0cf;
+  --text-color: #c5c8c9;
+  --heading-color: #ffffff;
+  --danger-color: #ff3e3e;
+  --warning-color: #ffaf00;
+  --card-bg-color: rgba(26, 35, 50, 0.85);
+  --header-height: 80px;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  background-image: 
+    radial-gradient(circle at 25px 25px, rgba(159, 239, 0, 0.1) 2px, transparent 0),
+    radial-gradient(circle at 75px 75px, rgba(159, 239, 0, 0.1) 2px, transparent 0);
+  background-size: 100px 100px;
+  line-height: 1.6;
+}
+
+/* Estilização do Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--heading-color);
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), transparent);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5em;
+  border-left: 4px solid var(--primary-color);
+  padding-left: 10px;
+}
+
+p, li {
+  margin-bottom: 1em;
+  font-size: 1.1rem;
+}
+
+strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+a:not(.nav-link):not(.resource-link):not(.social-links a)::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+a:not(.nav-link):not(.resource-link):not(.social-links a):hover::after {
+  width: 100%;
+}
+
+/* Header */
+header {
+  background-color: var(--secondary-bg-color);
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  border-bottom: 1px solid rgba(159, 239, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+  margin-right: 10px;
+  background: var(--primary-color);
+  color: var(--main-bg-color);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-icon::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  top: 0;
+  left: -100%;
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  20% { left: 100%; }
+  100% { left: 100%; }
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--primary-color);
+  text-shadow: 0 0 5px rgba(159, 239, 0, 0.5);
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.desktop-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0 5px;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-color);
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::before, .nav-link.active::before {
+  transform: scaleX(1);
+}
+
+.nav-link.active {
+  background: rgba(159, 239, 0, 0.1);
+  border-radius: 4px;
+}
+
+/* Menu Hamburguer (Responsivo) */
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: var(--header-height);
+  right: 0;
+  background-color: var(--secondary-bg-color);
+  width: 200px;
+  border-left: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu .nav-link {
+  display: block;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(159, 239, 0, 0.2);
+}
+
+/* Layout Principal */
+main {
+  min-height: calc(100vh - var(--header-height) - 200px);
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cards de golpes e recursos */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(159, 239, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: rgba(159, 239, 0, 0.3);
+}
+
+.card:hover::before {
+  width: 7px;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Estatísticas */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.stat-box {
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(159, 239, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  border-color: rgba(159, 239, 0, 0.3);
+}
+
+.stat-number {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px rgba(159, 239, 0, 0.3);
+}
+
+.stat-description {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* Links de recursos */
+.resource-link {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(159, 239, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.resource-link:hover {
+  transform: translateX(5px);
+  background-color: rgba(26, 35, 50, 0.95);
+  border-color: var(--primary-color);
+}
+
+.resource-icon {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  background: var(--primary-color);
+  color: var(--main-bg-color);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.resource-link div {
+  flex: 1;
+}
+
+.resource-link strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--heading-color);
+}
+
+.resource-link p {
+  margin-bottom: 0;
+  color: var(--text-color);
+}
+
+/* Listas */
+ul, ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+ul li, ol li {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+ul li::marker {
+  color: var(--primary-color);
+}
+
+ol li::marker {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Relatos de vítimas */
+#golpes p:nth-of-type(2), #golpes p:nth-of-type(3) {
+  font-style: italic;
+  border-left: 3px solid var(--primary-color);
+  padding-left: 15px;
+  background: var(--card-bg-color);
+  border-radius: 0 8px 8px 0;
+  padding: 15px 15px 15px 20px;
+  margin-bottom: 1.5rem;
+}
+
+/* Botão Voltar ao Topo */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: var(--main-bg-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.back-to-top:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary-bg-color);
+  padding: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+  border-top: 1px solid rgba(159, 239, 0, 0.3);
+  position: relative;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(159, 239, 0, 0.2);
+}
+
+.social-links a:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+/* Efeito "Terminal Hacker" nas seções */
+.page::before {
+  content: "/* CyberSafe Protocol */";
+  display: block;
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+/* Script para o botão de voltar ao topo e menu responsivo */
+@media screen and (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+  
+  .menu-btn {
+    display: block;
+  }
+  
+  .menu.active {
+    display: block;
+  }
+  
+  .card-container, .stats-container {
+    grid-template-columns: 1fr;
+  }
+  
+  header {
+    padding: 0.5rem 1rem;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+  
+  main {
+    padding: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Animações adicionais para efeitos de "hacker" */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* Efeito de terminal para algumas seções */
+.card h3, .resource-link strong {
+  position: relative;
+  overflow: hidden;
+}
+
+.card h3::before, .resource-link strong::before {
+  content: '> ';
+  color: var(--primary-color);
+  opacity: 0.7;
+}
+
+/* Estilização para formulário de contato (se for adicionado no futuro) */
+input, textarea, button {
+  font-family: 'Rajdhani', sans-serif;
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  background-color: var(--card-bg-color);
+  border: 1px solid rgba(159, 239, 0, 0.3);
+  border-radius: 4px;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(159, 239, 0, 0.5);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--main-bg-color);
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+::placeholder {
+  color: rgba(197, 200, 201, 0.5);
+}
+
+/* Estilos para a foto de perfil */
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 0 15px rgba(159, 239, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: rotate(5deg) scale(1.05);
+  box-shadow: 0 0 25px rgba(159, 239, 0, 0.5);
+}
+
+/* Responsividade para a foto */
+@media screen and (max-width: 768px) {
+  .profile-header {
+      flex-direction: column;
+      text-align: center;
+  }
+  
+  .profile-photo {
+      width: 120px;
+      height: 120px;
+  }
+}
+
+.profile-photo {
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-photo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(159, 239, 0, 0.1),
+        transparent
+    );
+    animation: scan 3s linear infinite;
+}
+
+@keyframes scan {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
