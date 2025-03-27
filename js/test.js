@@ -269,4 +269,3 @@ const questions = [
       }
     }
   });
-  
