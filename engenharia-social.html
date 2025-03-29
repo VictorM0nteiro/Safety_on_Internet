@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engenharia Social | CyberSafe+</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <h1>CyberSafe+</h1>
+            </div>
+        </a>
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="index.html" class="nav-link">Introdução</a></li>
+                <li><a href="golpes.html" class="nav-link">Principais Golpes</a></li>
+                <li><a href="engenharia-social.html" class="nav-link active">Engenharia Social</a></li>
+                <li><a href="protecao.html" class="nav-link">Como se Proteger</a></li>
+                <li><a href="recursos.html" class="nav-link">Recursos Úteis</a></li>
+                <li><a href="teste.html" class="nav-link">Teste seus Conhecimentos</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre Mim</a></li>
+            </ul>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="menu" id="menu">
+                <li><a href="index.html" class="nav-link">Introdução</a></li>
+                <li><a href="golpes.html" class="nav-link">Principais Golpes</a></li>
+                <li><a href="engenharia-social.html" class="nav-link active">Engenharia Social</a></li>
+                <li><a href="protecao.html" class="nav-link">Como se Proteger</a></li>
+                <li><a href="recursos.html" class="nav-link">Recursos Úteis</a></li>
+                <li><a href="teste.html" class="nav-link">Teste seus Conhecimentos</a></li>
+                <li><a href="sobre.html" class="nav-link">Sobre Mim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="engenharia-social" class="page active">
+            <h2>Engenharia Social</h2>
+            <p>
+                A engenharia social é uma das técnicas mais eficazes e perigosas utilizadas por criminosos digitais. 
+                Diferente de ataques técnicos que exploram falhas em sistemas, a engenharia social explora a 
+                natureza humana - nossa tendência a confiar, ajudar e seguir autoridades.
+            </p>
+            <p>
+                <strong>Dica importante:</strong> Lembre-se que a tecnologia mais segura do mundo pode ser comprometida 
+                por uma única decisão humana equivocada. Conhecer as táticas de engenharia social é sua melhor defesa.
+            </p>
+
+            <h3>O que é Engenharia Social?</h3>
+            <div class="card">
+                <p>
+                    Engenharia social é o conjunto de técnicas psicológicas usadas para manipular pessoas a realizar ações 
+                    ou divulgar informações confidenciais. Em vez de tentar encontrar vulnerabilidades em sistemas de computador, 
+                    os atacantes exploram a tendência humana natural de confiar.
+                </p>
+                <p>
+                    O termo "engenharia social" vem da ideia de "engenheirar" ou manipular interações sociais para 
+                    atingir um objetivo específico - geralmente obter acesso não autorizado a sistemas, dados ou locais físicos.
+                </p>
+            </div>
+
+            <h3>Como os Engenheiros Sociais Manipulam suas Vítimas</h3>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-icon">🎭</div>
+                    <h3>Criação de Confiança</h3>
+                    <p>
+                        Os atacantes estabelecem uma relação de confiança antes de solicitar informações sensíveis ou 
+                        pedir que a vítima realize alguma ação. Eles podem se passar por colegas de trabalho, suporte técnico, 
+                        ou até mesmo amigos e familiares.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⏰</div>
+                    <h3>Senso de Urgência</h3>
+                    <p>
+                        Criam situações que parecem urgentes para forçar decisões rápidas sem tempo para reflexão. 
+                        "Sua conta será bloqueada em 30 minutos se não confirmar seus dados agora" é um exemplo comum.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👔</div>
+                    <h3>Autoridade</h3>
+                    <p>
+                        Fingem ser figuras de autoridade (gerentes, policiais, técnicos de TI) para intimidar 
+                        ou influenciar as vítimas a obedecerem sem questionar. As pessoas tendem a seguir ordens 
+                        de autoridades percebidas.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎁</div>
+                    <h3>Reciprocidade</h3>
+                    <p>
+                        Oferecem algo de valor (presente, ajuda, informação) para criar um sentimento de dívida, 
+                        fazendo com que a vítima sinta-se obrigada a retribuir fornecendo o que o atacante deseja.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👥</div>
+                    <h3>Conformidade Social</h3>
+                    <p>
+                        Exploram a tendência humana de seguir comportamentos de grupo. "Todos os seus colegas já 
+                        confirmaram seus dados" é uma tática que usa pressão social para induzir conformidade.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">😨</div>
+                    <h3>Medo</h3>
+                    <p>
+                        Usam ameaças ou consequências negativas para manipular. "Seu computador está infectado com 
+                        um vírus perigoso" ou "Sua conta foi comprometida" são táticas comuns para induzir medo e pânico.
+                    </p>
+                </div>
+            </div>
+
+            <h3>Exemplos Comuns de Ataques de Engenharia Social</h3>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-icon">📞</div>
+                    <h3>Vishing (Phishing por Voz)</h3>
+                    <p>
+                        Ligações telefônicas onde o atacante se passa por uma instituição confiável. Por exemplo, 
+                        alguém ligando como "atendente do seu banco" informando sobre uma transação suspeita e 
+                        pedindo seus dados para "verificação".
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🏢</div>
+                    <h3>Tailgating (Carona)</h3>
+                    <p>
+                        O atacante segue alguém autorizado para entrar em uma área restrita. Exemplo: uma pessoa 
+                        com as mãos cheias de caixas pede para você segurar a porta de acesso ao escritório, quando 
+                        na verdade ela não tem autorização para entrar.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔍</div>
+                    <h3>Pretexting (Criação de Pretexto)</h3>
+                    <p>
+                        Criar um cenário falso para obter informações. Por exemplo, alguém ligando como "pesquisador 
+                        de mercado" oferecendo um prêmio, mas precisando confirmar dados pessoais para "enviar o prêmio".
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💼</div>
+                    <h3>Baiting (Isca)</h3>
+                    <p>
+                        Oferecer algo atraente para induzir uma ação. Exemplo: pen drives infectados deixados em 
+                        estacionamentos com etiquetas como "Confidencial" ou "Salários 2023", despertando a 
+                        curiosidade de quem encontra.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔎</div>
+                    <h3>Dumpster Diving (Mergulho no Lixo)</h3>
+                    <p>
+                        Procurar informações valiosas no lixo descartado. Documentos não triturados, faturas, 
+                        extratos bancários e correspondências podem revelar dados pessoais valiosos para um atacante.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👁️</div>
+                    <h3>Shoulder Surfing (Espiar por Cima do Ombro)</h3>
+                    <p>
+                        Observar diretamente quando alguém digita senhas ou informações sensíveis. Comum em locais 
+                        públicos como caixas eletrônicos, onde o atacante fica próximo para ver o que a vítima digita.
+                    </p>
+                </div>
+            </div>
+
+            <h3>Casos Reais de Engenharia Social</h3>
+            <div class="card">
+                <h4>O Golpe do Falso Suporte da Microsoft</h4>
+                <p>
+                    "Recebi uma ligação de alguém que dizia ser do suporte técnico da Microsoft. Ele afirmou que meu 
+                    computador estava enviando alertas de vírus para eles. Soou tão profissional e sabia tantos detalhes 
+                    técnicos que acreditei. Ele pediu acesso remoto ao meu computador para 'resolver o problema'. 
+                    Depois descobri que era um golpe quando começaram a aparecer cobranças no meu cartão de crédito."
+                    - João, 58 anos
+                </p>
+            </div>
+
+            <div class="card">
+                <h4>O Falso Funcionário</h4>
+                <p>
+                    "Um homem de uniforme apareceu no escritório dizendo que precisava verificar os extintores de incêndio. 
+                    Ele parecia tão legítimo que ninguém questionou sua presença. Enquanto inspecionava os extintores, 
+                    ele circulou livremente pelo escritório. Dias depois, descobrimos que informações confidenciais haviam 
+                    sido roubadas e que nenhuma empresa de manutenção de extintores havia enviado técnicos naquele dia."
+                    - Empresa de Contabilidade
+                </p>
+            </div>
+
+            <h3>Como Se Proteger da Engenharia Social</h3>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-icon">❓</div>
+                    <h3>Verifique a Identidade</h3>
+                    <p>
+                        Sempre confirme a identidade de quem está solicitando informações. Não use os contatos fornecidos 
+                        pela pessoa (podem ser falsos). Em vez disso, procure o número oficial da instituição e ligue de volta.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⏱️</div>
+                    <h3>Desconfie da Urgência</h3>
+                    <p>
+                        Pressão para agir rapidamente é um sinal de alerta. Instituições legítimas não exigem ações 
+                        imediatas sob ameaça. Tire um tempo para verificar antes de agir.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h3>Proteja Informações Pessoais</h3>
+                    <p>
+                        Seja cauteloso com o que compartilha nas redes sociais. Informações como data de nascimento, 
+                        nome de animais de estimação ou sua localização podem ser usadas em ataques direcionados.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>Eduque-se Continuamente</h3>
+                    <p>
+                        Mantenha-se informado sobre novos tipos de golpes e táticas. Quanto mais você souber sobre 
+                        as técnicas usadas, mais fácil será identificá-las quando for alvo.
+                    </p>
+                </div>
+            </div>
+
+            <h3>Lembre-se</h3>
+            <div class="card">
+                <p>
+                    A engenharia social funciona explorando emoções humanas básicas: medo, curiosidade, respeito à autoridade, 
+                    desejo de ajudar e confiança. Ao reconhecer quando essas emoções estão sendo manipuladas, você dá o 
+                    primeiro passo para se proteger.
+                </p>
+                <p>
+                    <strong>Uma regra simples:</strong> Se algo parece bom demais para ser verdade, provavelmente é. 
+                    Se algo gera medo ou urgência repentina, pare e verifique antes de agir.
+                </p>
+            </div>
+        </section>
+        <div class="page-navigation">
+            <a href="golpes.html" class="nav-button prev-button">← Anterior</a>
+            <a href="protecao.html" class="nav-button next-button">Próximo →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>CyberSafe+ © 2025 - Todos os direitos reservados</p>
+        <p>
+            Este site foi criado com o objetivo de informar e proteger pessoas com pouca exposição à tecnologia
+            contra golpes digitais. As informações aqui contidas são apenas para fins educativos.
+        </p>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</a>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/matrix-effect.js"></script>
+</body>
+
+</html>
