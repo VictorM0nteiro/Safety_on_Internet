@@ -1,4 +1,4 @@
-CyberSafe 45+
+CyberSafe+
 
 CyberSafe Tech é um projeto criado para ajudar pessoas com pouca exposição à tecnologia a aprenderem sobre segurança digital e a se protegerem de golpes online. Com uma interface inspirada no estilo Hack The Box, o site apresenta informações acessíveis e diretas sobre os principais riscos da internet e como evitá-los.
 
