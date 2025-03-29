@@ -1,12 +1,12 @@
 CyberSafe 45+
 
-CyberSafe 45+ é um projeto criado para ajudar pessoas com 45 anos ou mais a aprenderem sobre segurança digital e a se protegerem de golpes online. Com uma interface inspirada no estilo Hack The Box, o site apresenta informações acessíveis e diretas sobre os principais riscos da internet e como evitá-los.
+CyberSafe Tech é um projeto criado para ajudar pessoas com pouca exposição à tecnologia a aprenderem sobre segurança digital e a se protegerem de golpes online. Com uma interface inspirada no estilo Hack The Box, o site apresenta informações acessíveis e diretas sobre os principais riscos da internet e como evitá-los.
 
 💡 Motivação
 
 A crescente digitalização de serviços bancários, compras online e redes sociais tornou essencial que todas as pessoas, independentemente da idade, tenham conhecimento sobre segurança cibernética. Infelizmente, golpes online são cada vez mais comuns, e pessoas menos familiarizadas com tecnologia acabam sendo alvos frequentes.
 
-O CyberSafe 45+ busca preencher essa lacuna, oferecendo uma plataforma intuitiva e direta, que ensina boas práticas de segurança digital de forma didática e acessível.
+O CyberSafe Tech busca preencher essa lacuna, oferecendo uma plataforma intuitiva e direta, que ensina boas práticas de segurança digital de forma didática e acessível.
 
 🎯 Objetivos
 
